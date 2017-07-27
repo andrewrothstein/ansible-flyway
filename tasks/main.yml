@@ -11,7 +11,8 @@
   become: yes
   become_user: root
   unarchive:
-    src: /tmp/{{flyway_tgz}}
+    remote_src: yes
+    src: '/tmp/{{flyway_tgz}}'
     dest: '{{flyway_parent_install_dir}}'
     creates: '{{flyway_install_dir}}'
 
