@@ -5,3 +5,5 @@ flyway_checksum: sha256:c198497cdbad6eaec052cf7db1999c7899998e4d0c980bcad757998e
 flyway_mirror: https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline
 
 flyway_parent_install_dir: /usr/local
+
+flyway_cleanup: False

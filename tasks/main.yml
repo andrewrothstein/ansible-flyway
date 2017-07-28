@@ -12,7 +12,7 @@
   become_user: root
   unarchive:
     remote_src: yes
-    src: '/tmp/{{flyway_tgz}}'
+    src: /tmp/{{flyway_tgz}}
     dest: '{{flyway_parent_install_dir}}'
     creates: '{{flyway_install_dir}}'
 
@@ -34,3 +34,11 @@
     src: '{{item.f}}.j2'
     dest: '{{item.d}}/{{item.f}}'
     mode: '{{item.m|default("0644")}}'
+
+- name: cleanup...
+  become: yes
+  become_user: root
+  when: flyway_cleanup
+  file:
+    path: /tmp/{{flyway_tgz}}
+    state: absent
