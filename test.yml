@@ -2,5 +2,5 @@
 - hosts: all
   roles:
     - role: '{{playbook_dir}}'
-      flyway_cleanup: True
+
       

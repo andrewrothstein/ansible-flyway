@@ -1,20 +1,36 @@
 ---
-- name: download...
+- name: check for existing installation...
   become: yes
   become_user: root
-  get_url:
-    url: '{{flyway_tgz_url}}'
-    dest: /tmp/{{flyway_tgz}}
-    mode: 0644
-
-- name: unarchive
-  become: yes
-  become_user: root
-  unarchive:
-    remote_src: yes
-    src: /tmp/{{flyway_tgz}}
-    dest: '{{flyway_parent_install_dir}}'
-    creates: '{{flyway_install_dir}}'
+  stat:
+    path: '{{flyway_install_dir}}'
+  changed_when: false
+  register: flyway_binary
+- when: not flyway_binary.stat.exists
+  block:
+    - name: download...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{flyway_tgz_url}}'
+        dest: /tmp/{{flyway_tgz}}
+        checksum: '{{flyway_checksum}}'
+        mode: 0644
+    - name: unarchive
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{flyway_tgz}}
+        dest: '{{flyway_parent_install_dir}}'
+        creates: '{{flyway_install_dir}}'
+  always:
+    - name: cleanup...
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{flyway_tgz}}
+        state: absent
 
 - name: link...
   become: yes
@@ -34,11 +50,3 @@
     src: '{{item.f}}.j2'
     dest: '{{item.d}}/{{item.f}}'
     mode: '{{item.m|default("0644")}}'
-
-- name: cleanup...
-  become: yes
-  become_user: root
-  when: flyway_cleanup
-  file:
-    path: /tmp/{{flyway_tgz}}
-    state: absent

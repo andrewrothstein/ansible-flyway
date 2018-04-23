@@ -4,5 +4,7 @@ flyway_name: flyway-{{flyway_ver}}
 flyway_tgz: flyway-commandline-{{flyway_ver}}.tar.gz
 flyway_tgz_url: '{{flyway_mirror}}/{{flyway_ver}}/{{flyway_tgz}}'
 
+flyway_checksum: '{{flyway_checksums[flyway_ver]}}'
+
 flyway_install_dir: '{{flyway_parent_install_dir}}/{{flyway_name}}'
 flyway_install_link_dir: '{{flyway_parent_install_dir}}/flyway'
