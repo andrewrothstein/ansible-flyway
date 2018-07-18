@@ -4,7 +4,7 @@ galaxy_info:
   description: installs the flyway cli
   company: PointState Capital
   license:
-b*    - MIT
+    - MIT
   min_ansible_version: 2.0
   platforms:
     - name: EL
@@ -32,5 +32,3 @@ dependencies:
     version: v1.1.1
   - role: andrewrothstein.java-oracle-jre
     version: v2.0.8
-
-  
