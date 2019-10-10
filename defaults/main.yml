@@ -12,5 +12,13 @@ flyway_checksums:
   '5.0.7': sha256:5b9bf9fcc6d361b1160c90c59a669126687961ef3effe8eae562cdd2ceffb6fe
   # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.2.0/flyway-commandline-5.2.0.tar.gz
   '5.2.0': sha256:b2e585670bcb0b227df008cbc7846f966d3c3aa32c5badbf25fffba106bcd587
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.0.0/flyway-commandline-6.0.0.tar.gz
+  '6.0.0': sha256:8afe94342a29da96cadc57118517c9f10253d13bf505b093b49b10daa160bf2f
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.0.1/flyway-commandline-6.0.1.tar.gz
+  '6.0.1': sha256:30661fa5e0809b97d88ecab870a06a0c6869b340fa4f2a34f0fa3ed5375c66fd
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.0.2/flyway-commandline-6.0.2.tar.gz
+  '6.0.2': sha256:976e68dad31dd216f002a972ed7cdd77e6b25857fc5122ef0f30446af158e32a
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.0.3/flyway-commandline-6.0.3.tar.gz
+  '6.0.3': sha256:add6dd60792650bf72b9069a25c7e42a18addd863ed36bffc73dfabccbbee43f
   # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.0.4/flyway-commandline-6.0.4.tar.gz
   '6.0.4': sha256:47129b3b6ed0b6b77940bfba281f6f9ed83e90e5184f0801084ee03d98d91258
