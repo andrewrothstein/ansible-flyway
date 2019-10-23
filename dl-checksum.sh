@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=${1:-6.0.4}
+VER=${1:-6.0.7}
 DIR=~/Downloads
 FILE=flyway-commandline-${VER}.tar.gz
 LFILE=$DIR/$FILE
