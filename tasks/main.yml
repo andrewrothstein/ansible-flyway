@@ -3,7 +3,7 @@
   become: yes
   become_user: root
   stat:
-    path: '{{flyway_install_dir}}'
+    path: '{{ flyway_install_dir }}'
   changed_when: false
   register: flyway_binary
 - when: not flyway_binary.stat.exists
@@ -12,32 +12,32 @@
       become: yes
       become_user: root
       get_url:
-        url: '{{flyway_tgz_url}}'
-        dest: /tmp/{{flyway_tgz}}
-        checksum: '{{flyway_checksum}}'
+        url: '{{ flyway_tgz_url }}'
+        dest: /tmp/{{ flyway_tgz }}
+        checksum: '{{ flyway_checksum }}'
         mode: 0644
     - name: unarchive
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{flyway_tgz}}
-        dest: '{{flyway_parent_install_dir}}'
-        creates: '{{flyway_install_dir}}'
+        src: /tmp/{{ flyway_tgz }}
+        dest: '{{ flyway_parent_install_dir }}'
+        creates: '{{ flyway_install_dir }}'
   always:
     - name: cleanup...
       become: yes
       become_user: root
       file:
-        path: /tmp/{{flyway_tgz}}
+        path: /tmp/{{ flyway_tgz }}
         state: absent
 
 - name: link...
   become: yes
   become_user: root
   file:
-    src: '{{flyway_install_dir}}'
-    dest: '{{flyway_install_link_dir}}'
+    src: '{{ flyway_install_dir }}'
+    dest: '{{ flyway_install_link_dir }}'
     state: link
 
 - name: add to default path...
@@ -47,6 +47,6 @@
     - f: flyway.sh
       d: /etc/profile.d
   template:
-    src: '{{item.f}}.j2'
-    dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m|default("0644")}}'
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m|default("0644") }}'
