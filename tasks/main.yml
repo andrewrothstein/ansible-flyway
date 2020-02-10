@@ -24,6 +24,12 @@
         src: /tmp/{{ flyway_tgz }}
         dest: '{{ flyway_parent_install_dir }}'
         creates: '{{ flyway_install_dir }}'
+    - name: mark flyway executable executable
+      become: yes
+      become_user: root
+      file:
+        path: '{{ flyway_install_dir }}/flyway'
+        mode: 0755
   always:
     - name: cleanup...
       become: yes
