@@ -16,4 +16,4 @@ dl_ver() {
     printf "  '%s': sha256:%s\n" $ver $(sha256sum $lfile | awk '{print $1}')
 }
 
-dl_ver ${1:-6.3.1}
+dl_ver ${1:-6.3.2}
