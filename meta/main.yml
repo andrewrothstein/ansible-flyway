@@ -1,8 +1,8 @@
 dependencies:
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.5
+  version: v1.2.0
 - role: andrewrothstein.bash
-  version: v1.1.6
+  version: v1.1.7
 - openjdk_app: jre
   role: andrewrothstein.openjdk
   version: v2.0.14
@@ -21,6 +21,7 @@ galaxy_info:
     - all
   - name: Debian
     versions:
+    - bullseye
     - buster
     - stretch
   - name: EL
