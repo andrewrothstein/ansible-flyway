@@ -1,6 +1,6 @@
 andrewrothstein.flyway
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-flyway.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-flyway)
+![Build Status](https://github.com/andrewrothstein/ansible-flyway/actions/workflows/build.yml/badge.svg)
 
 Installs [flyway](https://flywaydb.org).
 
