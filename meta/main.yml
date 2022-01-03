@@ -1,7 +1,7 @@
 dependencies:
 - andrewrothstein.unarchive-deps
 - andrewrothstein.bash
-- name: andrewrothstein.openjdk
+- name: andrewrothstein.temurin
   openjdk_app: jre
 galaxy_info:
   author: Andrew Rothstein
