@@ -1,11 +1,8 @@
 dependencies:
-- role: andrewrothstein.unarchive-deps
-  version: v1.2.2
-- role: andrewrothstein.bash
-  version: v1.1.8
-- openjdk_app: jre
-  role: andrewrothstein.openjdk
-  version: v2.0.17
+- andrewrothstein.unarchive-deps
+- andrewrothstein.bash
+- name: andrewrothstein.openjdk
+  openjdk_app: jre
 galaxy_info:
   author: Andrew Rothstein
   company: PointState Capital
@@ -28,8 +25,8 @@ galaxy_info:
     - 8
   - name: Fedora
     versions:
-    - 34
     - 35
+    - 36
   - name: Ubuntu
     versions:
     - bionic
