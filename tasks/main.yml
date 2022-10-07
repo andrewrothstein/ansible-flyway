@@ -1,6 +1,14 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
+- include_role:
+    name: andrewrothstein.bash
+- include_role:
+    name: andrewrothstein.temurin
+  vars:
+    openjdk_app: jre
 - name: check for existing installation in {{ flyway_install_dir }}
-  become: yes
+  become: true
   become_user: root
   stat:
     path: '{{ flyway_install_dir }}'
@@ -9,7 +17,7 @@
 - when: not flyway_binary.stat.exists
   block:
     - name: downloading {{ flyway_tgz_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ flyway_tgz_url }}'
@@ -17,29 +25,29 @@
         checksum: '{{ flyway_checksum }}'
         mode: 0644
     - name: unarchiving {{ flyway_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ flyway_tmp_tgz }}'
         dest: '{{ flyway_parent_install_dir }}'
         creates: '{{ flyway_install_dir }}'
     - name: mark flyway executable executable
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ flyway_install_dir }}/flyway'
         mode: 0755
   always:
     - name: rm {{ flyway_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ flyway_tmp_tgz }}'
         state: absent
 
 - name: linking {{ flyway_install_link_dir }} to {{ flyway_install_dir }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ flyway_install_dir }}'
@@ -47,7 +55,7 @@
     state: link
 
 - name: add to default path...
-  become: yes
+  become: true
   become_user: root
   with_items:
     - f: flyway.sh
