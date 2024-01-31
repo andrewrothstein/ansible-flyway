@@ -1,66 +1,70 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- include_role:
+- name: Installing andrewrothstein.bash
+  ansible.builtin.include_role:
     name: andrewrothstein.bash
-- include_role:
+- name: Installing andrewrothstein.temurin
+  ansible.builtin.include_role:
     name: andrewrothstein.temurin
   vars:
     openjdk_app: jre
-- name: check for existing installation in {{ flyway_install_dir }}
+- name: Check for existing installation in {{ flyway_install_dir }}
   become: true
   become_user: root
-  stat:
+  ansible.builtin.stat:
     path: '{{ flyway_install_dir }}'
   changed_when: false
   register: flyway_binary
-- when: not flyway_binary.stat.exists
+- name: Downloading and installing flyway
+  when: not flyway_binary.stat.exists
   block:
-    - name: downloading {{ flyway_tgz_url }}
+    - name: Downloading {{ flyway_tgz_url }}
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ flyway_tgz_url }}'
         dest: '{{ flyway_tmp_tgz }}'
         checksum: '{{ flyway_checksum }}'
-        mode: 0644
-    - name: unarchiving {{ flyway_tmp_tgz }}
+        mode: '644'
+    - name: Unarchiving {{ flyway_tmp_tgz }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ flyway_tmp_tgz }}'
         dest: '{{ flyway_parent_install_dir }}'
         creates: '{{ flyway_install_dir }}'
-    - name: mark flyway executable executable
+    - name: Mark flyway executable executable
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ flyway_install_dir }}/flyway'
-        mode: 0755
+        mode: '755'
   always:
-    - name: rm {{ flyway_tmp_tgz }}
+    - name: Rm -f {{ flyway_tmp_tgz }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ flyway_tmp_tgz }}'
         state: absent
 
-- name: linking {{ flyway_install_link_dir }} to {{ flyway_install_dir }}
+- name: Linking {{ flyway_install_link_dir }} to {{ flyway_install_dir }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ flyway_install_dir }}'
     dest: '{{ flyway_install_link_dir }}'
     state: link
 
-- name: add to default path...
+- name: Add to default path...
   become: true
   become_user: root
   with_items:
     - f: flyway.sh
       d: /etc/profile.d
-  template:
+  ansible.builtin.template:
     src: '{{ item.f }}.j2'
     dest: '{{ item.d }}/{{ item.f }}'
-    mode: '{{ item.m|default("0644") }}'
+    mode: '{{ item.m | default("644") }}'
