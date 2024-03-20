@@ -2,6 +2,6 @@
 - name: andrewrothstein.unarchivedeps
   version: 3.0.1
 - name: andrewrothstein.bash
-  version: v1.2.1
+  version: v1.2.2
 - name: andrewrothstein.temurin
   version: 1.4.1
