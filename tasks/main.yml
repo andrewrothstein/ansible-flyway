@@ -1,7 +1,4 @@
 ---
-- name: Installing andrewrothstein.unarchivedeps
-  ansible.builtin.include_role:
-    name: andrewrothstein.unarchivedeps
 - name: Installing andrewrothstein.bash
   ansible.builtin.include_role:
     name: andrewrothstein.bash
@@ -28,6 +25,9 @@
         dest: '{{ flyway_tmp_tgz }}'
         checksum: '{{ flyway_checksum }}'
         mode: '644'
+    - name: Installing andrewrothstein.unarchivedeps
+      ansible.builtin.include_role:
+        name: andrewrothstein.unarchivedeps
     - name: Unarchiving {{ flyway_tmp_tgz }}
       become: true
       become_user: root
