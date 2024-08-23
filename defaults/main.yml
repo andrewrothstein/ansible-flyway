@@ -1,6 +1,6 @@
 ---
 # defaults file for flyway
-flyway_ver: 10.17.1
+flyway_ver: 10.17.2
 flyway_mirror: https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline
 
 flyway_parent_install_dir: /usr/local
@@ -250,3 +250,5 @@ flyway_checksums:
   '10.16.0': sha256:41040c05dc221dde8d36662420496862975f08dc43b339a345173d45326801e7
   # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/10.17.1/flyway-commandline-10.17.1.tar.gz
   '10.17.1': sha256:b846c04f29799791d7a2b1dfca9804d834af76d337813918cf252e8b28de44b8
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/10.17.2/flyway-commandline-10.17.2.tar.gz
+  '10.17.2': sha256:00ad5e96e548e3e1eeec04568136acd0288a654d788b9b9a0ed1aa87a7b00b48
