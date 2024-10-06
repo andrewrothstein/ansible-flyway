@@ -260,3 +260,5 @@ flyway_checksums:
   '10.18.1': sha256:55795ea306b63e65b5dd6f984635bb9ddd0b4a47d1fcd0bc5ed13edcd760ac9b
   # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/10.18.2/flyway-commandline-10.18.2.tar.gz
   '10.18.2': sha256:c9cf5c19ddc310422dd773820539cce14bdb1d4dcefb4578d7a4e42aa2894516
+  # https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/10.19.0/flyway-commandline-10.19.0.tar.gz
+  '10.19.0': sha256:2c6a53ba8d198a635e309b1d53b421ac86e8d2ba8a91583cbf325668e6122775
