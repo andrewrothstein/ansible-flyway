@@ -6,7 +6,7 @@ dl_ver() {
     local ver=$1
     local file=flyway-commandline-${ver}.tar.gz
     local lfile=$DIR/$file
-    local url=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/${ver}/$file
+    local url="https://github.com/flyway/flyway/releases/download/flyway-${ver}/${file}"
 
     if [ ! -e $lfile ];
     then
@@ -17,4 +17,4 @@ dl_ver() {
     printf "  '%s': sha256:%s\n" $ver $(sha256sum $lfile | awk '{print $1}')
 }
 
-dl_ver ${1:-11.7.1}
+dl_ver ${1:-11.11.2}
