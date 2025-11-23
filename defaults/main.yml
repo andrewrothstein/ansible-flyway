@@ -1,6 +1,6 @@
 ---
 # defaults file for flyway
-flyway_ver: 11.15.0
+flyway_ver: 11.17.1
 flyway_mirror: https://github.com/flyway/flyway/releases/download
 
 flyway_parent_install_dir: /usr/local
@@ -38,3 +38,9 @@ flyway_checksums:
   '11.14.1': sha256:356c6deea3a200d93ce3b7076ecf75ea335a665519ca7465ad53f7db5324a8eb
   # https://github.com/flyway/flyway/releases/download/flyway-11.15.0/flyway-commandline-11.15.0.tar.gz
   '11.15.0': sha256:6c22e083508e698ff0496c31d77fbcf829c29f7bc8c1f5d8e3604a3721adac7b
+  # https://github.com/flyway/flyway/releases/download/flyway-11.16.0/flyway-commandline-11.16.0.tar.gz
+  '11.16.0': sha256:e50431fb9ea6d724fd6961c00e4bf7f88d7e859ab342fd469d355c38b888c024
+  # https://github.com/flyway/flyway/releases/download/flyway-11.17.0/flyway-commandline-11.17.0.tar.gz
+  '11.17.0': sha256:29ba5be9c1a87fb0f547d8c14acb5be8fd15bd5a42c50381019a329b30704aa1
+  # https://github.com/flyway/flyway/releases/download/flyway-11.17.1/flyway-commandline-11.17.1.tar.gz
+  '11.17.1': sha256:fa33ed14a4f3828e8f03b037ebe475a0db8e4f80e4a99bf614972bf924481a8f
