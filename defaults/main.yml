@@ -46,3 +46,5 @@ flyway_checksums:
   '11.17.1': sha256:fa33ed14a4f3828e8f03b037ebe475a0db8e4f80e4a99bf614972bf924481a8f
   # https://github.com/flyway/flyway/releases/download/flyway-11.17.2/flyway-commandline-11.17.2.tar.gz
   '11.17.2': sha256:a8de5af145a37aa4f2cd7cfe510591ed9f93ffcd17b9d7499f8def5b90cb4fa3
+  # https://github.com/flyway/flyway/releases/download/flyway-11.18.0/flyway-commandline-11.18.0.tar.gz
+  '11.18.0': sha256:14c0423feef9ffb1d91b50d575d77873d5f36b3de828efc0ce4e477a3b782c10
