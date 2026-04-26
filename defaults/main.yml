@@ -4,6 +4,7 @@ flyway_ver: 12.4.0
 flyway_mirror: https://github.com/flyway/flyway/releases/download
 
 flyway_parent_install_dir: /usr/local
+flyway_bin_dir: /usr/local/bin
 
 flyway_checksums:
   # https://github.com/flyway/flyway/releases/download/flyway-11.9.0/flyway-commandline-11.9.0.tar.gz
