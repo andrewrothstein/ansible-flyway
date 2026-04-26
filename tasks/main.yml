@@ -58,13 +58,17 @@
     dest: '{{ flyway_install_link_dir }}'
     state: link
 
-- name: Add to default path...
+- name: Linking {{ flyway_bin_dir }}/flyway to {{ flyway_install_link_dir }}/flyway
   become: true
   become_user: root
-  with_items:
-    - f: flyway.sh
-      d: /etc/profile.d
-  ansible.builtin.template:
-    src: '{{ item.f }}.j2'
-    dest: '{{ item.d }}/{{ item.f }}'
-    mode: '{{ item.m | default("644") }}'
+  ansible.builtin.file:
+    src: '{{ flyway_install_link_dir }}/flyway'
+    dest: '{{ flyway_bin_dir }}/flyway'
+    state: link
+
+- name: Remove legacy /etc/profile.d/flyway.sh
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    path: /etc/profile.d/flyway.sh
+    state: absent
