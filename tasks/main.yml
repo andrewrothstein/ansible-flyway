@@ -58,13 +58,13 @@
     dest: '{{ flyway_install_link_dir }}'
     state: link
 
-- name: Linking {{ flyway_bin_dir }}/flyway to {{ flyway_install_link_dir }}/flyway
+- name: Installing {{ flyway_bin_dir }}/flyway wrapper
   become: true
   become_user: root
-  ansible.builtin.file:
-    src: '{{ flyway_install_link_dir }}/flyway'
+  ansible.builtin.template:
+    src: flyway.j2
     dest: '{{ flyway_bin_dir }}/flyway'
-    state: link
+    mode: '755'
 
 - name: Remove legacy /etc/profile.d/flyway.sh
   become: true
