@@ -9,3 +9,5 @@ flyway_checksum: '{{ flyway_checksums[flyway_ver] }}'
 
 flyway_install_dir: '{{ flyway_parent_install_dir }}/{{ flyway_name }}'
 flyway_install_link_dir: '{{ flyway_parent_install_dir }}/flyway'
+flyway_bin_dir: '{{ flyway_parent_install_dir }}/bin'
+flyway_java_home: '{{ flyway_parent_install_dir }}/openjdk-jre'

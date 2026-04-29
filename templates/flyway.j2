@@ -1,0 +1,3 @@
+#!/bin/sh
+export JAVA_HOME="{{ flyway_java_home }}"
+exec "{{ flyway_install_link_dir }}/flyway" "$@"
