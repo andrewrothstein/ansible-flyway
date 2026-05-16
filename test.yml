@@ -5,7 +5,7 @@
     - role: '{{ playbook_dir }}'
   tasks:
     - name: Executing 'flyway -v'
-      ansible.builtin.command: bash -l -c '/usr/local/flyway/flyway -v'
+      ansible.builtin.command: flyway -v
       changed_when: false
       register: flyway_test_output
     - name: Output of 'flyway -v'
