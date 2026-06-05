@@ -1,6 +1,6 @@
 ---
 # defaults file for flyway
-flyway_ver: 12.8.0
+flyway_ver: 12.8.1
 flyway_mirror: https://github.com/flyway/flyway/releases/download
 
 flyway_parent_install_dir: /usr/local
@@ -84,3 +84,5 @@ flyway_checksums:
   '12.7.0': sha256:b4274f9434c7af702ec1c9513ee0ad4ce0f07c957e163bcdba10c8ac2f0d4822
   # https://github.com/flyway/flyway/releases/download/flyway-12.8.0/flyway-commandline-12.8.0.tar.gz
   '12.8.0': sha256:d0f8c615fcbcf9233da426dc00409264e2f77713023281c96930d6f742d7942f
+  # https://github.com/flyway/flyway/releases/download/flyway-12.8.1/flyway-commandline-12.8.1.tar.gz
+  '12.8.1': sha256:7092f20453384355acbc1ed83f4b82b7f2232caed3d9bdf6e88bc55bb78f5440
