@@ -1,6 +1,6 @@
 ---
 # defaults file for flyway
-flyway_ver: 13.9.0
+flyway_ver: 13.10.3
 flyway_mirror: https://github.com/flyway/flyway/releases/download
 
 flyway_parent_install_dir: /usr/local
@@ -112,3 +112,7 @@ flyway_checksums:
   '13.8.0': sha256:f773e5369c3e9c040e117835bc6f0cc310733195b58ab605f03acb3a415bbfa8
   # https://github.com/flyway/flyway/releases/download/flyway-13.9.0/flyway-commandline-13.9.0.tar.gz
   '13.9.0': sha256:023ce936999dab675a995de6cd082e875983c52440a74b4440fa44ca56d50620
+  # https://github.com/flyway/flyway/releases/download/flyway-13.10.0/flyway-commandline-13.10.0.tar.gz
+  '13.10.0': sha256:4ba7995fb74cf3967d215cc792348ff2dbd61736af93a6fa8a5a2ae7bcb948b1
+  # https://github.com/flyway/flyway/releases/download/flyway-13.10.3/flyway-commandline-13.10.3.tar.gz
+  '13.10.3': sha256:ba7c2f477b2e906526754e5479f59bce7ab999a524a4912bc5e930701774a201
