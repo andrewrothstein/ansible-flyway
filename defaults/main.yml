@@ -1,6 +1,6 @@
 ---
 # defaults file for flyway
-flyway_ver: 13.11.1
+flyway_ver: 13.12.0
 flyway_mirror: https://github.com/flyway/flyway/releases/download
 
 flyway_parent_install_dir: /usr/local
@@ -34,6 +34,14 @@ flyway_checksums:
   '11.12.0': sha256:6863a7e26a5142e798ec5d754770e738d217015d8b19dc37fa84de6439d219aa
   # https://github.com/flyway/flyway/releases/download/flyway-11.13.0/flyway-commandline-11.13.0.tar.gz
   '11.13.0': sha256:c88a6d9cd22defaa987abf4084b459d2186e521c79e8f5975378e390b073d753
+  # https://github.com/flyway/flyway/releases/download/flyway-11.13.1/flyway-commandline-11.13.1.tar.gz
+  '11.13.1': sha256:5701ac76e2cc6a292072bfde31dc6453a9101bb21761c64bd09b61809850af47
+  # https://github.com/flyway/flyway/releases/download/flyway-11.13.2/flyway-commandline-11.13.2.tar.gz
+  '11.13.2': sha256:c701b740526ae6f489991a191706316ccc013f139f5b955a03719cc2fad4d2f4
+  # https://github.com/flyway/flyway/releases/download/flyway-11.13.3/flyway-commandline-11.13.3.tar.gz
+  '11.13.3': sha256:747bafddc19617c59413c6c16305677f0c2aa7f9f6ecf4c42a0fec8d0f1f9c4d
+  # https://github.com/flyway/flyway/releases/download/flyway-11.14.0/flyway-commandline-11.14.0.tar.gz
+  '11.14.0': sha256:2e19faf4e621351afb8f077c460297f1fd3e4e923bb8f8af1df4cdb09caffcc8
   # https://github.com/flyway/flyway/releases/download/flyway-11.14.1/flyway-commandline-11.14.1.tar.gz
   '11.14.1': sha256:356c6deea3a200d93ce3b7076ecf75ea335a665519ca7465ad53f7db5324a8eb
   # https://github.com/flyway/flyway/releases/download/flyway-11.15.0/flyway-commandline-11.15.0.tar.gz
@@ -68,6 +76,8 @@ flyway_checksums:
   '12.1.0': sha256:8bf18289d5a057dba0a9c4cd17b8b2b523808b5c634fe02b3a7e401b57fa4eb4
   # https://github.com/flyway/flyway/releases/download/flyway-12.1.1/flyway-commandline-12.1.1.tar.gz
   '12.1.1': sha256:cebae1ff5fbd9a25844d0ae937ee44621c0c7671a46267e23b729ac12717feee
+  # https://github.com/flyway/flyway/releases/download/flyway-12.2.0/flyway-commandline-12.2.0.tar.gz
+  '12.2.0': sha256:f8535d83c28bfe1962fc13482783f924f7460d6d585145e2196a00978742e147
   # https://github.com/flyway/flyway/releases/download/flyway-12.3.0/flyway-commandline-12.3.0.tar.gz
   '12.3.0': sha256:13c157b0984ea3bfe8eab517049e83c19ba911a4fa83c6633348223b0ed33343
   # https://github.com/flyway/flyway/releases/download/flyway-12.4.0/flyway-commandline-12.4.0.tar.gz
@@ -110,6 +120,8 @@ flyway_checksums:
   '13.7.0': sha256:2b73bda15888765421101336cbfbd9d78a4e2d07e7090bd53f53ad319786e060
   # https://github.com/flyway/flyway/releases/download/flyway-13.8.0/flyway-commandline-13.8.0.tar.gz
   '13.8.0': sha256:f773e5369c3e9c040e117835bc6f0cc310733195b58ab605f03acb3a415bbfa8
+  # https://github.com/flyway/flyway/releases/download/flyway-13.8.1/flyway-commandline-13.8.1.tar.gz
+  '13.8.1': sha256:5a3f053a5fa8cb75abcfb5d80f649a1a03fb910f6cf77bcc2dfbc477339c3ad3
   # https://github.com/flyway/flyway/releases/download/flyway-13.9.0/flyway-commandline-13.9.0.tar.gz
   '13.9.0': sha256:023ce936999dab675a995de6cd082e875983c52440a74b4440fa44ca56d50620
   # https://github.com/flyway/flyway/releases/download/flyway-13.10.0/flyway-commandline-13.10.0.tar.gz
@@ -118,3 +130,5 @@ flyway_checksums:
   '13.10.3': sha256:ba7c2f477b2e906526754e5479f59bce7ab999a524a4912bc5e930701774a201
   # https://github.com/flyway/flyway/releases/download/flyway-13.11.1/flyway-commandline-13.11.1.tar.gz
   '13.11.1': sha256:c44f9389a6e77e363f7cf25bdbb431f6a8ee16387101ffe1f85e9f16fcd0972e
+  # https://github.com/flyway/flyway/releases/download/flyway-13.12.0/flyway-commandline-13.12.0.tar.gz
+  '13.12.0': sha256:f64b1e5fa3a3433d2f2e874cd9e884b84bb07264f121e2885a76b363ad5ee3e0
