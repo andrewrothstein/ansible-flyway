@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
-DIR=$(mktemp -d)
-trap 'rm -rf "$DIR"' EXIT
+DIR=~/Downloads
 
 dl_ver() {
     local ver=$1
@@ -9,7 +8,10 @@ dl_ver() {
     local lfile=$DIR/$file
     local url="https://github.com/flyway/flyway/releases/download/flyway-${ver}/${file}"
 
-    curl -fsSL --proto '=https' --tlsv1.2 -o "$lfile" "$url"
+    if [ ! -e "$lfile" ];
+    then
+        curl -fsSL --proto '=https' --tlsv1.2 -o "$lfile" "$url"
+    fi
     local sum
     sum=$(sha256sum "$lfile" | awk '{print $1}')
     if ! printf '%s' "$sum" | grep -Eq '^[0-9a-f]{64}$'; then
