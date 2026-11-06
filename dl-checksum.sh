@@ -23,6 +23,6 @@ dl_ver() {
     printf "  '%s': sha256:%s\n" "$ver" "$sum"
 }
 
-for v in "${@:-13.12.0}"; do
+for v in "${@:-13.12.1}"; do
     dl_ver "$v"
 done
